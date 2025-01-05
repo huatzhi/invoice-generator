@@ -46,10 +46,10 @@ The application will be available at `http://localhost:8501`
 invoice-generator/
 ├── invoice.py          # Main Streamlit application
 ├── template.html       # Invoice HTML template
-├── pyproject.toml     # Poetry dependency configuration
-├── poetry.lock        # Poetry lock file
-├── README.md          # Project documentation
-└── .gitignore        # Git ignore rules
+├── pyproject.toml      # Poetry dependency configuration
+├── poetry.lock         # Poetry lock file
+├── README.md           # Project documentation
+└── .gitignore          # Git ignore rules
 ```
 
 ## Usage
