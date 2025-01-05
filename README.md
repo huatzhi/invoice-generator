@@ -11,7 +11,7 @@ A Streamlit application for generating professional invoices from HTML template.
 
 1. Clone the repository:
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/huatzhi/invoice-generator.git
 cd invoice-generator
 ```
 
