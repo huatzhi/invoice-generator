@@ -6,6 +6,7 @@ A Streamlit application for generating professional invoices from HTML template.
 
 - Python 3.11+
 - Poetry
+- Docker (optional)
 
 ## Installation
 
@@ -38,6 +39,17 @@ streamlit run invoice.py
 poetry run streamlit run invoice.py
 ```
 
+### Method 3: Using Docker
+1. Build the Docker image:
+```bash
+docker build -t invoice-generator .
+```
+
+2. Run the container:
+```bash
+docker run -p 8501:8501 invoice-generator
+```
+
 The application will be available at `http://localhost:8501`
 
 ## Project Structure
@@ -49,6 +61,7 @@ invoice-generator/
 ├── pyproject.toml     # Poetry dependency configuration
 ├── poetry.lock        # Poetry lock file
 ├── README.md          # Project documentation
+├── Dockerfile         # Docker configuration
 └── .gitignore        # Git ignore rules
 ```
 
