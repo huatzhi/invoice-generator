@@ -21,9 +21,9 @@ st.sidebar.divider()
 st.sidebar.header('Content')
 
 content_df = pd.DataFrame([
-    {"description": "Eggshell Camisole Top", "fee": 123},
-    {"description": "Cuban Collar Shirt", "fee": 254},
-    {"description": "Floral Cotton Dress", "fee": 123},
+    {"description": "Eggshell Camisole Top", "fee": 123.40},
+    {"description": "Cuban Collar Shirt", "fee": 254.09},
+    {"description": "Floral Cotton Dress", "fee": 123.00},
 ])
 
 edit_df_config = {
@@ -40,7 +40,7 @@ edited_content_df = st.sidebar.data_editor(
 total_fee = edited_content_df['fee'].sum()
 
 # Actual content
-@st.cache_data
+# @st.cache_data
 def get_html_template():
     with open('template.html', 'r') as f:
         template = f.read()
@@ -54,13 +54,13 @@ address_parts = [
     billed_to_name,
     billed_to_address_1,
     billed_to_address_2,
-    f"{billed_to_zip} {billed_to_city}, {billed_to_state},",
+    f"{billed_to_zip} {billed_to_city}, {billed_to_state}",
     billed_to_country
 ]
 formatted_address = '<br>'.join(part.strip() for part in address_parts if part and part.strip())
 
 # Format the date
-formatted_date = invoice_date.strftime("%d %B %Y")
+formatted_date = invoice_date.strftime("%b %d, %Y").replace(" 0", " ")
 
 # Create table rows for items
 item_rows = ""
