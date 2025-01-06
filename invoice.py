@@ -40,7 +40,7 @@ edited_content_df = st.sidebar.data_editor(
 total_fee = edited_content_df['fee'].sum()
 
 # Actual content
-# @st.cache_data
+@st.cache_data
 def get_html_template():
     with open('template.html', 'r') as f:
         template = f.read()
